@@ -4,10 +4,12 @@ import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
 import { provision } from './src/provision.js';
+import { ZeroDBClient } from './src/zerodb.js';
 import { TOOLS, executeTool } from './src/tools.js';
 
 async function main() {
-  const client = await provision();
+  const credentials = await provision();
+  const client = new ZeroDBClient(credentials);
 
   const server = new Server(
     { name: 'zerodb-sequential-thinking-mcp', version: '0.1.0' },
