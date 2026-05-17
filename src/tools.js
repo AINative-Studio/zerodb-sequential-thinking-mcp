@@ -1,3 +1,6 @@
+import { addStep, getChain } from './reasoner.js';
+import { concludeChain, resumeChain } from './plan-store.js';
+
 export const TOOLS = [
   {
     name: 'sequential_think',
@@ -46,11 +49,14 @@ export const TOOLS = [
 export async function executeTool(name, args, client) {
   switch (name) {
     case 'sequential_think':
-      return { chain_id: args.chain_id || crypto.randomUUID(), thought: args.thought, step: args.step_number || 1, status: 'ok' };
+      return addStep(args, client);
+
     case 'sequential_conclude':
-      return { artifact_id: null, conclusion: args.conclusion, status: 'stub — implement plan-store.js' };
+      return concludeChain(args.chain_id, args.conclusion, args.title, args.save_as || 'plan', client);
+
     case 'sequential_resume':
-      return { artifact_id: args.artifact_id, prior_conclusion: null, status: 'stub — implement plan-store.js' };
+      return resumeChain(args.artifact_id, client);
+
     default:
       throw new Error(`Unknown tool: ${name}`);
   }
