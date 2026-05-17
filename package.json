@@ -10,14 +10,48 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["mcp", "mcp-server", "model-context-protocol", "sequential-thinking", "zerodb", "ainative", "agent-memory"],
-  "author": { "name": "AINative Studio", "email": "toby@rely.ventures", "url": "https://ainative.studio" },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "sequential-thinking",
+    "chain-of-thought",
+    "reasoning",
+    "zerodb",
+    "ainative",
+    "agent-memory",
+    "persistent-memory",
+    "plan-artifacts",
+    "cross-session",
+    "claude",
+    "claude-code",
+    "claude-desktop",
+    "windsurf",
+    "ai-agents",
+    "agentic-ai"
+  ],
+  "author": {
+    "name": "AINative Studio",
+    "email": "toby@rely.ventures",
+    "url": "https://ainative.studio"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AINative-Studio/zerodb-sequential-thinking-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AINative-Studio/zerodb-sequential-thinking-mcp/issues"
+  },
+  "homepage": "https://github.com/AINative-Studio/zerodb-sequential-thinking-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",
     "dotenv": "^16.4.0"
   },
   "engines": { "node": ">=18.0.0" },
   "files": ["index.js", "src/", "README.md", "LICENSE", ".env.example"],
-  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" }
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
