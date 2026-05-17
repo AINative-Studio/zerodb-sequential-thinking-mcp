@@ -52,7 +52,7 @@ export async function provision() {
 }
 
 async function createInstantDB() {
-  const res = await fetch(`${API_BASE}/api/v1/instant-db`, {
+  const res = await fetch(`${API_BASE}/api/v1/public/instant-db`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ agree_terms: true, on_behalf_of: 'mcp-sequential-thinking' }),
@@ -76,7 +76,7 @@ async function createInstantDB() {
 }
 
 async function sendClaimEmail(email, claimUrl, projectId, apiKey) {
-  await fetch(`${API_BASE}/api/v1/instant-db/send-claim-email`, {
+  await fetch(`${API_BASE}/api/v1/public/instant-db/send-claim-email`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'X-API-Key': apiKey },
     body: JSON.stringify({ email, claim_url: claimUrl, project_id: projectId }),

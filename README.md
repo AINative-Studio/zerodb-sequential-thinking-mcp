@@ -239,7 +239,16 @@ Power user override (env vars take precedence over credentials file):
 
 [ZeroDB](https://ainative.studio) — the agent memory and storage platform built for agentic AI. Every reasoning chain, plan artifact, and working memory record is stored in ZeroDB's `memories` table with vector embeddings for semantic recall.
 
-- **Plan artifacts API:** `POST/GET/PATCH /api/v1/public/memory/v2/plan`
-- **Memory API:** `POST /api/v1/public/memory/v2/remember`
-- **Instant provisioning:** `POST /api/v1/instant-db`
-- **Docs:** [ainative.studio/docs](https://ainative.studio/docs)
+| Resource | Link |
+|----------|------|
+| Website | [ainative.studio](https://ainative.studio) |
+| Docs | [ainative.studio/docs](https://ainative.studio/docs) |
+| Quickstart | [ainative.studio/docs/quickstart](https://ainative.studio/docs/quickstart) |
+| API Reference | [ainative.studio/docs/api](https://ainative.studio/docs/api) |
+| GitHub | [github.com/AINative-Studio](https://github.com/AINative-Studio) |
+| Status | [ainative.studio/status](https://ainative.studio/status) |
+
+**Key API endpoints used by this MCP:**
+- `POST /api/v1/public/instant-db` — zero-auth agent self-provisioning
+- `POST/GET/PATCH /api/v1/public/memory/v2/plan` — plan artifact persistence
+- `POST /api/v1/public/memory/v2/remember` — working memory per step

@@ -1,6 +1,6 @@
 {
   "name": "zerodb-sequential-thinking-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Persistent sequential thinking MCP — chain-of-thought reasoning that survives sessions, resumes across agents, and saves conclusions as plan artifacts. Powered by ZeroDB. Zero-config: agents self-provision a ZeroDB account on first run, no signup required.",
   "type": "module",
   "main": "index.js",
