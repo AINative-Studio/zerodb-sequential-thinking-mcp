@@ -1,6 +1,6 @@
 {
   "name": "zerodb-sequential-thinking-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Persistent sequential thinking MCP — chain-of-thought reasoning that survives sessions, resumes across agents, and saves conclusions as plan artifacts. Powered by ZeroDB. Zero-config: agents self-provision a ZeroDB account on first run, no signup required.",
   "type": "module",
   "main": "index.js",
@@ -89,7 +89,7 @@
   "bugs": {
     "url": "https://github.com/AINative-Studio/zerodb-sequential-thinking-mcp/issues"
   },
-  "homepage": "https://github.com/AINative-Studio/zerodb-sequential-thinking-mcp#readme",
+  "homepage": "https://ainative.studio/products/zerodb",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",
     "dotenv": "^16.4.0"
